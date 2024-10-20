@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body >
     <!-- ? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -56,7 +56,7 @@
                                 <!-- Main-menu -->
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
-                                        <ul id="navigation">                                                                                          
+                                        <ul id="navigation">
                                             <li class="active" ><a href="index.html">Home</a></li>
                                             <li><a href="courses.html">Courses</a></li>
                                             <li><a href="ec.html">Eligibility Checker</a></li>
@@ -76,7 +76,7 @@
                                     </nav>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <!-- Mobile Menu -->
                         <div class="col-12">
                             <div class="mobile_menu d-block d-lg-none"></div>
@@ -102,356 +102,80 @@
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                            <li class="breadcrumb-item"><a href="ec.html">Eligibility Checker</a></li> 
+                                            <li class="breadcrumb-item"><a href="ec.html">Eligibility Checker</a></li>
                                         </ol>
                                     </nav>
                                     <!-- breadcrumb End -->
                                 </div>
                             </div>
                         </div>
-                    </div>          
+                    </div>
                 </div>
             </div>
         </section>
-        <center><h1 style="font-size:80px"><b>Still under construction</b></h1></center>
-        <center><h1 style="font-size:40px"><b>Will be live soon..</b></h1></center>
-        <!-- <div style="background-color: #10274b; padding: 20px; border-radius: 10px; max-width: 600px; margin: 0 auto;">
-            <h1 style="color: white;"><center>Choose Your Branch</center></h1>
-            <div style="display: flex; justify-content: center; gap: 20px;">
-                <button onclick="redirectTo('army')" style="background-color: #27ae60; border: none; color: black; padding: 15px 30px; font-size: 18px; cursor: pointer;">Army</button>
-                <button onclick="redirectTo('navy')" style="background-color: white; border: none; color: black; padding: 15px 30px; font-size: 18px; cursor: pointer;">Navy</button>
-                <button onclick="redirectTo('airforce')" style="background-color: #2980b9; border: none; color: black; padding: 15px 30px; font-size: 18px; cursor: pointer;">Air Force</button>
-              </div>
-        </div>    
+        <!-- <center><h1 style="font-size:80px"><b>Still under construction</b></h1></center>
+        <center><h1 style="font-size:40px"><b>Will be live soon..</b></h1></center> -->
+        
 
-  <script>
-    function redirectTo(branch) {
-      if (branch === 'army') {
-        window.location.href = 'army-eligibility.html'; // redirect to Army form
-      } else if (branch === 'navy') {
-        window.location.href = 'navy-eligibility.html'; // redirect to Navy form
-      } else if (branch === 'airforce') {
-        window.location.href = 'airforce-eligibility.html'; // redirect to Air Force form
-      }
-    }
-  </script> -->
-        <!-- <div class="services-area services-area2 section-padding40">
-            <div class="container">
-                <div class="row justify-content-sm-center">
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-30">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon1.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>60+ UX courses</h3>
-                                <p>The automated process all your website tasks.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-30">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon2.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>Expert instructors</h3>
-                                <p>The automated process all your website tasks.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-8">
-                        <div class="single-services mb-30">
-                            <div class="features-icon">
-                                <img src="assets/img/icon/icon3.svg" alt="">
-                            </div>
-                            <div class="features-caption">
-                                <h3>Life time access</h3>
-                                <p>The automated process all your website tasks.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+            <h1 style="color: #333; text-align: center;">Military Eligibility Checker</h1>
+            <form id="eligibilityForm">
+                <label for="force" style="display: block; margin-top: 10px;">Force:</label>
+                <select id="force" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="Army">Army</option>
+                    <option value="Navy">Navy</option>
+                    <option value="Air_Force">Air Force</option>
+                </select>
+                <br>
+                <label for="sex" style="display: block; margin-top: 10px; ">Sex:</label>
+                <select id="sex" required style="width: 100%; padding: 8px; margin-top: 5px; margin-left: -100 px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+    
+                <label for="dateOfBirth" style="display: block; margin-top: 10px;">Date of Birth:</label>
+                <input type="date" id="dateOfBirth" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+    
+                <label for="height" style="display: block; margin-top: 10px;">Height (in meters):</label>
+                <input type="number" id="height" step="0.01" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+    
+                <label for="weight" style="display: block; margin-top: 10px;">Weight (in kg):</label>
+                <input type="number" id="weight" step="0.1" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+    
+                <label for="maritalStatus" style="display: block; margin-top: 10px;">Marital Status:</label>
+                <select id="maritalStatus" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="never-married">Never Married</option>
+                    <option value="married">Married</option>
+                    <option value="divorced">Divorced</option>
+                </select>
+    
+                <label for="nationality" style="display: block; margin-top: 10px;">Nationality:</label>
+                <select id="nationality" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="Bangladeshi">Bangladeshi</option>
+                    <option value="Other">Other</option>
+                </select>
+    
+                <label for="dualNationality" style="display: block; margin-top: 10px;">Do you have another nationality?</label>
+                <select id="dualNationality" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+    
+                <label for="judicialCase" style="display: block; margin-top: 10px;">Are you involved in any Judicial Case?</label>
+                <select id="judicialCase" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+    
+                <button type="submit" style="display: block; width: 100%; padding: 10px; background-color: #5cb85c; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Check Eligibility</button>
+            </form>
+    
+            <div id="result" style="margin-top: 20px; padding: 10px; border-radius: 4px;"></div>
         </div>
-         About Area-1 Start -->
-        <!-- <section class="about-area1 fix pt-10">
-            <div class="support-wrapper align-items-center">
-                <div class="left-content1">
-                    <div class="about-icon">
-                        <img src="assets/img/icon/about.svg" alt="">
-                    </div> -->
-                    <!-- section tittle -->
-                    <!-- <div class="section-tittle section-tittle2 mb-55">
-                        <div class="front-text">
-                            <h2 class="">Learn new skills online with top educators</h2>
-                            <p>The automated process all your website tasks. Discover tools and 
-                                techniques to engage effectively with vulnerable children and young 
-                            people.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Techniques to engage effectively with vulnerable children and young people.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world  learning together.</p>
-                        </div>
-                    </div>
 
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world learning together. Online learning is as easy and natural.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-content1"> -->
-                    <!-- img -->
-                    <!-- <div class="right-img">
-                        <img src="assets/img/gallery/about.png" alt="">
 
-                        <div class="video-icon" >
-                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0"><i class="fas fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- About Area End -->
-        <!--? top subjects Area Start -->
-        <!-- <div class="topic-area section-padding40">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="section-tittle text-center mb-55">
-                            <h2>Explore top subjects</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic1.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic2.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic3.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic4.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic5.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic6.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic7.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-topic text-center mb-30">
-                            <div class="topic-img">
-                                <img src="assets/img/gallery/topic8.png" alt="">
-                                <div class="topic-content-box">
-                                    <div class="topic-content">
-                                        <h3><a href="#">Programing</a></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-xl-12">
-                        <div class="section-tittle text-center mt-20">
-                            <a href="courses.html" class="border-btn">View More Subjects</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- top subjects End -->
-        <!--? About Area-3 Start -->
-        <!-- <section class="about-area3 fix">
-            <div class="support-wrapper align-items-center">
-                <div class="right-content3"> -->
-                    <!-- img -->
-                    <!-- <div class="right-img">
-                        <img src="assets/img/gallery/about3.png" alt="">
-                    </div>
-                </div>
-                <div class="left-content3"> -->
-                    <!-- section tittle -->
-                    <!-- <div class="section-tittle section-tittle2 mb-20">
-                        <div class="front-text">
-                            <h2 class="">Learner outcomes on courses you will take</h2>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Techniques to engage effectively with vulnerable children and young people.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world
-                            learning together.</p>
-                        </div>
-                    </div>
-                    <div class="single-features">
-                        <div class="features-icon">
-                            <img src="assets/img/icon/right-icon.svg" alt="">
-                        </div>
-                        <div class="features-caption">
-                            <p>Join millions of people from around the world learning together.
-                            Online learning is as easy and natural.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        About Area End --> 
-        <!--? Team
-        <section class="team-area section-padding40 fix">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-8">
-                        <div class="section-tittle text-center mb-55">
-                            <h2>Community experts</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-active">
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="assets/img/gallery/team1.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Urela</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="assets/img/gallery/team2.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Uttom</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="assets/img/gallery/team3.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Shakil</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="assets/img/gallery/team4.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. Arafat</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                    <div class="single-cat text-center">
-                        <div class="cat-icon">
-                            <img src="assets/img/gallery/team3.png" alt="">
-                        </div>
-                        <div class="cat-cap">
-                            <h5><a href="services.html">Mr. saiful</a></h5>
-                            <p>The automated process all your website tasks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
+
         <!-- Services End -->
     </main>
     <footer>
@@ -544,11 +268,117 @@
           </div>
           <!-- Footer End-->
       </div>
-  </footer> 
+  </footer>
   <!-- Scroll Up -->
   <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
+<script>
+    document.getElementById('eligibilityForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const force = document.getElementById('force').value;
+        const sex = document.getElementById('sex').value;
+        const dateOfBirth = new Date(document.getElementById('dateOfBirth').value);
+        const height = parseFloat(document.getElementById('height').value);
+        const weight = parseFloat(document.getElementById('weight').value);
+        const maritalStatus = document.getElementById('maritalStatus').value;
+        const nationality = document.getElementById('nationality').value;
+        const dualNationality = document.getElementById('dualNationality').value;
+        const judicialCase = document.getElementById('judicialCase').value;
+
+        const reasons = [];
+        let isEligible = true;
+
+        // Age check
+        const today = new Date();
+        const ageInDays = (today - dateOfBirth) / (1000 * 60 * 60 * 24);
+        if (force === 'Air_Force') {
+            if (ageInDays < 5840 || ageInDays > 8030) {
+                isEligible = false;
+                reasons.push("Age requirement not met");
+            }
+        } else {
+            if (ageInDays < 6022 || ageInDays > 7665) {
+                isEligible = false;
+                reasons.push("Age requirement not met");
+            }
+        }
+
+        // Height check
+        if (force === 'Army' || force === 'Navy') {
+            if (sex === 'Male' && height < 1.63) {
+                isEligible = false;
+                reasons.push("Height requirement not met");
+            }
+            if (sex === 'Female' && height < 1.55) {
+                isEligible = false;
+                reasons.push("Height requirement not met");
+            }
+        } else if (force === 'Air_Force') {
+            if (sex === 'Male' && height < 1.63) {
+                isEligible = false;
+                reasons.push("Height requirement not met");
+            }
+            if (sex === 'Female' && height < 1.55) {
+                isEligible = false;
+                reasons.push("Height requirement not met");
+            }
+        }
+
+        // BMI check
+        const bmi = weight / (height * height);
+        if (sex === 'Male') {
+            if (bmi < 17.7 || bmi > 26.2) {
+                isEligible = false;
+                reasons.push("BMI requirement not met");
+            }
+        } else {
+            if (bmi < 17.7 || bmi > 25.2) {
+                isEligible = false;
+                reasons.push("BMI requirement not met");
+            }
+        }
+
+        // Marital status check
+        if (maritalStatus !== 'never-married') {
+            isEligible = false;
+            reasons.push("Marital status requirement not met");
+        }
+
+        // Nationality check
+        if (nationality !== 'Bangladeshi') {
+            isEligible = false;
+            reasons.push("Nationality requirement not met");
+        }
+
+        // Dual nationality check
+        if (dualNationality === 'yes') {
+            isEligible = false;
+            reasons.push("Dual nationality is not allowed");
+        }
+
+        // Judicial case check
+        if (judicialCase === 'yes') {
+            isEligible = false;
+            reasons.push("Involvement in judicial case");
+        }
+
+        // Display result
+        const resultDiv = document.getElementById('result');
+        if (isEligible) {
+            resultDiv.innerHTML = '<p class="eligible">Congratulations!! You are eligible to apply.</p>';
+        } else {
+            let reasonsHtml = reasons.map(reason => `<li>${reason}</li>`).join('');
+            resultDiv.innerHTML = `
+                <p class="not-eligible">Unfortunately!! You aren't eligible to apply.</p>
+                <p>Reasons:</p>
+                <ul>${reasonsHtml}</ul>
+            `;
+        }
+        resultDiv.innerHTML += '<p><strong>WARNING:</strong> This result is fully based on your provided information. We can\'t guarantee that this result is 100% accurate.</p>';
+    });
+</script>
 
 <!-- JS here -->
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -588,9 +418,244 @@
 <script src="./assets/js/mail-script.js"></script>
 <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-<!-- Jquery Plugins, main Jquery -->	
+<!-- Jquery Plugins, main Jquery -->
 <script src="./assets/js/plugins.js"></script>
 <script src="./assets/js/main.js"></script>
 
 </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Military Eligibility Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .eligible {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .not-eligible {
+            background-color: #f2dede;
+            color: #a94442;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Military Eligibility Checker</h1>
+        <form id="eligibilityForm">
+            <label for="force">Force:</label>
+            <select id="force" required>
+                <option value="Army">Army</option>
+                <option value="Navy">Navy</option>
+                <option value="Air_Force">Air Force</option>
+            </select>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="dateOfBirth">Date of Birth:</label>
+            <input type="date" id="dateOfBirth" required>
+
+            <label for="height">Height (in meters):</label>
+            <input type="number" id="height" step="0.01" required>
+
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" step="0.1" required>
+
+            <label for="maritalStatus">Marital Status:</label>
+            <select id="maritalStatus" required>
+                <option value="never-married">Never Married</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+            </select>
+
+            <label for="nationality">Nationality:</label>
+            <select id="nationality" required>
+                <option value="Bangladeshi">Bangladeshi</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="dualNationality">Do you have another nationality?</label>
+            <select id="dualNationality" required>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <label for="judicialCase">Are you involved in any Judicial Case?</label>
+            <select id="judicialCase" required>
+                <option value="no">No</option>
+                <option value="yes">Yes</option>
+            </select>
+
+            <button type="submit">Check Eligibility</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('eligibilityForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const force = document.getElementById('force').value;
+            const sex = document.getElementById('sex').value;
+            const dateOfBirth = new Date(document.getElementById('dateOfBirth').value);
+            const height = parseFloat(document.getElementById('height').value);
+            const weight = parseFloat(document.getElementById('weight').value);
+            const maritalStatus = document.getElementById('maritalStatus').value;
+            const nationality = document.getElementById('nationality').value;
+            const dualNationality = document.getElementById('dualNationality').value;
+            const judicialCase = document.getElementById('judicialCase').value;
+
+            const reasons = [];
+            let isEligible = true;
+
+            // Age check
+            const today = new Date();
+            const ageInDays = (today - dateOfBirth) / (1000 * 60 * 60 * 24);
+            if (force === 'Air_Force') {
+                if (ageInDays < 5840 || ageInDays > 8030) {
+                    isEligible = false;
+                    reasons.push("Age requirement not met");
+                }
+            } else {
+                if (ageInDays < 6022 || ageInDays > 7665) {
+                    isEligible = false;
+                    reasons.push("Age requirement not met");
+                }
+            }
+
+            // Height check
+            if (force === 'Army' || force === 'Navy') {
+                if (sex === 'Male' && height < 1.63) {
+                    isEligible = false;
+                    reasons.push("Height requirement not met");
+                }
+                if (sex === 'Female' && height < 1.55) {
+                    isEligible = false;
+                    reasons.push("Height requirement not met");
+                }
+            } else if (force === 'Air_Force') {
+                if (sex === 'Male' && height < 1.63) {
+                    isEligible = false;
+                    reasons.push("Height requirement not met");
+                }
+                if (sex === 'Female' && height < 1.55) {
+                    isEligible = false;
+                    reasons.push("Height requirement not met");
+                }
+            }
+
+            // BMI check
+            const bmi = weight / (height * height);
+            if (sex === 'Male') {
+                if (bmi < 17.7 || bmi > 26.2) {
+                    isEligible = false;
+                    reasons.push("BMI requirement not met");
+                }
+            } else {
+                if (bmi < 17.7 || bmi > 25.2) {
+                    isEligible = false;
+                    reasons.push("BMI requirement not met");
+                }
+            }
+
+            // Marital status check
+            if (maritalStatus !== 'never-married') {
+                isEligible = false;
+                reasons.push("Marital status requirement not met");
+            }
+
+            // Nationality check
+            if (nationality !== 'Bangladeshi') {
+                isEligible = false;
+                reasons.push("Nationality requirement not met");
+            }
+
+            // Dual nationality check
+            if (dualNationality === 'yes') {
+                isEligible = false;
+                reasons.push("Dual nationality is not allowed");
+            }
+
+            // Judicial case check
+            if (judicialCase === 'yes') {
+                isEligible = false;
+                reasons.push("Involvement in judicial case");
+            }
+
+            // Display result
+            const resultDiv = document.getElementById('result');
+            if (isEligible) {
+                resultDiv.innerHTML = '<p class="eligible">Congratulations!! You are eligible to apply.</p>';
+            } else {
+                let reasonsHtml = reasons.map(reason => `<li>${reason}</li>`).join('');
+                resultDiv.innerHTML = `
+                    <p class="not-eligible">Unfortunately!! You aren't eligible to apply.</p>
+                    <p>Reasons:</p>
+                    <ul>${reasonsHtml}</ul>
+                `;
+            }
+            resultDiv.innerHTML += '<p><strong>WARNING:</strong> This result is fully based on your provided information. We can\'t guarantee that this result is 100% accurate.</p>';
+        });
+    </script>
+</body>
+</html> -->
