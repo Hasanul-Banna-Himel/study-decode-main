@@ -117,61 +117,33 @@
         <center><h1 style="font-size:40px"><b>Will be live soon..</b></h1></center> -->
         
 
-        <div style="max-width: 800px; margin: auto; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
-            <h1 style="color: #333; text-align: center;">Military Eligibility Checker</h1>
-            <form id="eligibilityForm">
-                <label for="force" style="display: block; margin-top: 10px;">Force:</label>
-                <select id="force" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-                    <option value="Army">Army</option>
-                    <option value="Navy">Navy</option>
-                    <option value="Air_Force">Air Force</option>
-                </select>
-                <br>
-                <label for="sex" style="display: block; margin-top: 10px; ">Sex:</label>
-                <select id="sex" required style="width: 100%; padding: 8px; margin-top: 5px; margin-left: -100 px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                </select>
-    
-                <label for="dateOfBirth" style="display: block; margin-top: 10px;">Date of Birth:</label>
-                <input type="date" id="dateOfBirth" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-    
-                <label for="height" style="display: block; margin-top: 10px;">Height (in meters):</label>
-                <input type="number" id="height" step="0.01" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-    
-                <label for="weight" style="display: block; margin-top: 10px;">Weight (in kg):</label>
-                <input type="number" id="weight" step="0.1" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-    
-                <label for="maritalStatus" style="display: block; margin-top: 10px;">Marital Status:</label>
-                <select id="maritalStatus" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-                    <option value="never-married">Never Married</option>
-                    <option value="married">Married</option>
-                    <option value="divorced">Divorced</option>
-                </select>
-    
-                <label for="nationality" style="display: block; margin-top: 10px;">Nationality:</label>
-                <select id="nationality" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-                    <option value="Bangladeshi">Bangladeshi</option>
-                    <option value="Other">Other</option>
-                </select>
-    
-                <label for="dualNationality" style="display: block; margin-top: 10px;">Do you have another nationality?</label>
-                <select id="dualNationality" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
-                </select>
-    
-                <label for="judicialCase" style="display: block; margin-top: 10px;">Are you involved in any Judicial Case?</label>
-                <select id="judicialCase" required style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box;">
-                    <option value="no">No</option>
-                    <option value="yes">Yes</option>
-                </select>
-    
-                <button type="submit" style="display: block; width: 100%; padding: 10px; background-color: #5cb85c; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">Check Eligibility</button>
-            </form>
-    
-            <div id="result" style="margin-top: 20px; padding: 10px; border-radius: 4px;"></div>
+        <h2>Force Application Form</h2>
+
+    <form id="applicationForm" style="width: 300px; margin: auto;">
+        <label for="force">Select Force:</label><br>
+        <select id="force" name="force" style="width: 100%; padding: 5px; margin: 10px 0;" onchange="toggleBranch()">
+            <option value="">-- Select Force --</option>
+            <option value="Army">Army</option>
+            <option value="Navy">Navy</option>
+            <option value="Air_Force">Air Force</option>
+        </select>
+
+        <div id="branchSelection" style="display: none;">
+            <label for="branch">Select Branch (For Air Force):</label><br>
+            <select id="branch" name="branch" style="width: 100%; padding: 5px; margin: 10px 0;">
+                <option value="">-- Select Branch --</option>
+                <option value="GDP">GDP</option>
+                <option value="ATC">ATC</option>
+                <option value="ADWC">ADWC</option>
+                <option value="Logistic">Logistic</option>
+                <option value="Admin">Admin</option>
+                <option value="Finance">Finance</option>
+                <option value="Meteorology">Meteorology</option>
+            </select>
         </div>
+
+        <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Submit</button>
+    </form>
 
 
 
@@ -274,110 +246,16 @@
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 <script>
-    document.getElementById('eligibilityForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+    function toggleBranch() {
+        var force = document.getElementById("force").value;
+        var branchSelection = document.getElementById("branchSelection");
 
-        const force = document.getElementById('force').value;
-        const sex = document.getElementById('sex').value;
-        const dateOfBirth = new Date(document.getElementById('dateOfBirth').value);
-        const height = parseFloat(document.getElementById('height').value);
-        const weight = parseFloat(document.getElementById('weight').value);
-        const maritalStatus = document.getElementById('maritalStatus').value;
-        const nationality = document.getElementById('nationality').value;
-        const dualNationality = document.getElementById('dualNationality').value;
-        const judicialCase = document.getElementById('judicialCase').value;
-
-        const reasons = [];
-        let isEligible = true;
-
-        // Age check
-        const today = new Date();
-        const ageInDays = (today - dateOfBirth) / (1000 * 60 * 60 * 24);
-        if (force === 'Air_Force') {
-            if (ageInDays < 5840 || ageInDays > 8030) {
-                isEligible = false;
-                reasons.push("Age requirement not met");
-            }
+        if (force === "Air_Force") {
+            branchSelection.style.display = "block";
         } else {
-            if (ageInDays < 6022 || ageInDays > 7665) {
-                isEligible = false;
-                reasons.push("Age requirement not met");
-            }
+            branchSelection.style.display = "none";
         }
-
-        // Height check
-        if (force === 'Army' || force === 'Navy') {
-            if (sex === 'Male' && height < 1.63) {
-                isEligible = false;
-                reasons.push("Height requirement not met");
-            }
-            if (sex === 'Female' && height < 1.55) {
-                isEligible = false;
-                reasons.push("Height requirement not met");
-            }
-        } else if (force === 'Air_Force') {
-            if (sex === 'Male' && height < 1.63) {
-                isEligible = false;
-                reasons.push("Height requirement not met");
-            }
-            if (sex === 'Female' && height < 1.55) {
-                isEligible = false;
-                reasons.push("Height requirement not met");
-            }
-        }
-
-        // BMI check
-        const bmi = weight / (height * height);
-        if (sex === 'Male') {
-            if (bmi < 17.7 || bmi > 26.2) {
-                isEligible = false;
-                reasons.push("BMI requirement not met");
-            }
-        } else {
-            if (bmi < 17.7 || bmi > 25.2) {
-                isEligible = false;
-                reasons.push("BMI requirement not met");
-            }
-        }
-
-        // Marital status check
-        if (maritalStatus !== 'never-married') {
-            isEligible = false;
-            reasons.push("Marital status requirement not met");
-        }
-
-        // Nationality check
-        if (nationality !== 'Bangladeshi') {
-            isEligible = false;
-            reasons.push("Nationality requirement not met");
-        }
-
-        // Dual nationality check
-        if (dualNationality === 'yes') {
-            isEligible = false;
-            reasons.push("Dual nationality is not allowed");
-        }
-
-        // Judicial case check
-        if (judicialCase === 'yes') {
-            isEligible = false;
-            reasons.push("Involvement in judicial case");
-        }
-
-        // Display result
-        const resultDiv = document.getElementById('result');
-        if (isEligible) {
-            resultDiv.innerHTML = '<p class="eligible">Congratulations!! You are eligible to apply.</p>';
-        } else {
-            let reasonsHtml = reasons.map(reason => `<li>${reason}</li>`).join('');
-            resultDiv.innerHTML = `
-                <p class="not-eligible">Unfortunately!! You aren't eligible to apply.</p>
-                <p>Reasons:</p>
-                <ul>${reasonsHtml}</ul>
-            `;
-        }
-        resultDiv.innerHTML += '<p><strong>WARNING:</strong> This result is fully based on your provided information. We can\'t guarantee that this result is 100% accurate.</p>';
-    });
+    }
 </script>
 
 <!-- JS here -->
