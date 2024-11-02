@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="ec.css">
 </head>
 
 <body >
@@ -117,16 +118,16 @@
         <center><h1 style="font-size:40px"><b>Will be live soon..</b></h1></center> -->
         
 
-        <h2>Force Application Form</h2>
+    <center><h1>Force Application Form</h1></center>
 
-    <form id="applicationForm" style="width: 300px; margin: auto;">
+    <!-- <form id="applicationForm" style="width: 300px; margin: auto;">
         <label for="force">Select Force:</label><br>
         <select id="force" name="force" style="width: 100%; padding: 5px; margin: 10px 0;" onchange="toggleBranch()">
             <option value="">-- Select Force --</option>
             <option value="Army">Army</option>
             <option value="Navy">Navy</option>
             <option value="Air_Force">Air Force</option>
-        </select>
+        </select><br>
 
         <div id="branchSelection" style="display: none;">
             <label for="branch">Select Branch (For Air Force):</label><br>
@@ -141,9 +142,182 @@
                 <option value="Meteorology">Meteorology</option>
             </select>
         </div>
+        <label for="sex">Sex:</label><br>
+        <select id="sex" name="sex" style="width: 100%; padding: 5px; margin: 10px 0;" onchange="toggleBranch()">
+            <option value="">-- Select Sex --</option>
+            <option value="male">Male</option>
+            <option value="female">Femael</option>
+            
+        </select>
 
         <button type="submit" style="width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer;">Submit</button>
-    </form>
+    </form> -->
+    <div class="container">
+        <h1>Military Force Eligibility Checker</h1>
+        <form id="eligibilityForm">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Force:</label>
+                        <select id="force" required>
+                            <option value="">Select Force</option>
+                            <option value="Army">Army</option>
+                            <option value="Navy">Navy</option>
+                            <option value="Air_Force">Air Force</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group dependent-field" id="branchGroup">
+                        <label>Branch:</label>
+                        <select id="branch">
+                            <option value="GDP">GDP</option>
+                            <option value="ATC">ATC</option>
+                            <option value="ADWC">ADWC</option>
+                            <option value="Logistic">Logistic</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Finance">Finance</option>
+                            <option value="Meteorology">Meteorology</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Sex:</label>
+                        <select id="sex" required>
+                            <option value="">Select Sex</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Date of Birth:</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Height:</label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="heightFt" placeholder="Feet" step="0.01" required>
+                            <input type="number" id="heightInch" placeholder="Inches" step="0.01" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Weight (kg):</label>
+                        <input type="number" id="weight" step="0.1" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Eye Power:</label>
+                        <input type="number" id="eyePower" step="0.1" required>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Marital Status:</label>
+                        <select id="maritalStatus" required>
+                            <option value="">Select Status</option>
+                            <option value="never-married">Never Married</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Nationality:</label>
+                        <select id="nationality" required>
+                            <option value="">Select Nationality</option>
+                            <option value="Bangladeshi">Bangladeshi</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Dual Nationality:</label>
+                        <select id="dualNationality" required>
+                            <option value="">Select Option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Judicial Case:</label>
+                        <select id="judicialCase" required>
+                            <option value="">Select Option</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6"></div>
+            </div>
+            
+            
+
+            
+
+           
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            <div class="form-group">
+                <label>Medium:</label>
+                <select id="medium" required>
+                    <option value="">Select Medium</option>
+                    <option value="National">National</option>
+                    <option value="English">English</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>HSC/A Levels Year:</label>
+                <input type="number" id="hscYear" required>
+            </div>
+
+            <div id="gpaFields" style="display: none;">
+                <div class="form-group">
+                    <label>SSC GPA:</label>
+                    <input type="number" id="sscGpa" step="0.01" min="0" max="5">
+                </div>
+                <div class="form-group">
+                    <label>HSC GPA:</label>
+                    <input type="number" id="hscGpa" step="0.01" min="0" max="5">
+                </div>
+            </div>
+
+            <center><button type="submit">Check Eligibility</button></center>
+        </form>
+
+        <div id="result" style="display: none;"></div>
+    </div>
 
 
 
@@ -247,16 +421,155 @@
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
 </div>
 <script>
-    function toggleBranch() {
-        var force = document.getElementById("force").value;
-        var branchSelection = document.getElementById("branchSelection");
-
-        if (force === "Air_Force") {
-            branchSelection.style.display = "block";
+    document.getElementById('force').addEventListener('change', function() {
+        const branchGroup = document.getElementById('branchGroup');
+        if (this.value === 'Air_Force') {
+            branchGroup.style.display = 'block';
         } else {
-            branchSelection.style.display = "none";
+            branchGroup.style.display = 'none';
         }
-    }
+    });
+
+    document.getElementById('medium').addEventListener('change', function() {
+        const gpaFields = document.getElementById('gpaFields');
+        if (this.value === 'National') {
+            gpaFields.style.display = 'block';
+        } else {
+            gpaFields.style.display = 'none';
+        }
+    });
+
+    document.getElementById('eligibilityForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const force = document.getElementById('force').value;
+        const sex = document.getElementById('sex').value;
+        const dob = new Date(document.getElementById('dob').value);
+        const heightFt = parseFloat(document.getElementById('heightFt').value);
+        const heightInch = parseFloat(document.getElementById('heightInch').value);
+        const weight = parseFloat(document.getElementById('weight').value);
+        const chestNormal = parseFloat(document.getElementById('chestNormal').value);
+        const chestExpanded = parseFloat(document.getElementById('chestExpanded').value);
+        const eyePower = parseFloat(document.getElementById('eyePower').value);
+        const maritalStatus = document.getElementById('maritalStatus').value;
+        const nationality = document.getElementById('nationality').value;
+        const dualNationality = document.getElementById('dualNationality').value;
+        const judicialCase = document.getElementById('judicialCase').value;
+        const issbAppearance = document.getElementById('issbAppearance').value;
+        const medium = document.getElementById('medium').value;
+        const hscYear = parseInt(document.getElementById('hscYear').value);
+        
+        let isEligible = true;
+        const reasons = [];
+
+        // Convert height to meters
+        const heightM = (heightFt * 0.3048) + (heightInch * 0.0254);
+
+        // Calculate age in days (reference date: 2025-07-01 for Army/Navy, 2025-06-23 for Air Force)
+        const refDate = force === 'Air_Force' ? new Date(2025, 5, 23) : new Date(2025, 6, 1);
+        const ageDays = Math.floor((refDate - dob) / (1000 * 60 * 60 * 24));
+
+        // Check age eligibility
+        if (force === 'Army' || force === 'Navy') {
+            if (ageDays < 6022 || ageDays > 7665) {
+                isEligible = false;
+                reasons.push("Age requirement not met");
+            }
+        } else if (force === 'Air_Force') {
+            if (ageDays < 5840 || ageDays > 8030) {
+                isEligible = false;
+                reasons.push("Age requirement not met");
+            }
+        }
+
+        // Check height requirements
+        if (force === 'Army' || force === 'Navy') {
+            if (sex === 'Male' && heightM < 1.63) {
+                isEligible = false;
+                reasons.push("Height requirement not met");
+            }
+            if (sex === 'Female' && heightM < (force === 'Army' ? 1.55 : 1.58)) {
+                isEligible = false;
+                reasons.push("Height requirement not met");
+            }
+        }
+
+        // Calculate and check BMI
+        const bmi = weight / (heightM * heightM);
+        if (sex === 'Male' && (bmi < 17.7 || bmi > 26.2)) {
+            isEligible = false;
+            reasons.push("BMI requirement not met");
+        }
+        if (sex === 'Female' && (bmi < 17.7 || bmi > 25.2)) {
+            isEligible = false;
+            reasons.push("BMI requirement not met");
+        }
+
+        // Check chest measurements
+        const chestDifference = chestExpanded - chestNormal;
+        if (force === 'Air_Force') {
+            if (sex === 'Male' && (chestNormal < 32 || chestDifference < 2)) {
+                isEligible = false;
+                reasons.push("Chest size requirement not met");
+            }
+        } else {
+            if (sex === 'Male' && (chestNormal < 30 || chestDifference < 2)) {
+                isEligible = false;
+                reasons.push("Chest size requirement not met");
+            }
+        }
+        if (sex === 'Female' && (chestNormal < 28 || chestDifference < 2)) {
+            isEligible = false;
+            reasons.push("Chest size requirement not met");
+        }
+
+        // Check other requirements
+        if (maritalStatus !== 'never-married') {
+            isEligible = false;
+            reasons.push("Marital status requirement not met");
+        }
+
+        if (nationality !== 'Bangladeshi') {
+            isEligible = false;
+            reasons.push("Nationality requirement not met");
+        }
+
+        if (dualNationality === 'yes') {
+            isEligible = false;
+            reasons.push("Dual nationality is not allowed");
+        }
+
+        if (judicialCase === 'yes') {
+            isEligible = false;
+            reasons.push("You are involved in judicial case");
+        }
+
+        if (issbAppearance === 'twice_appeared_&_2_times_screened_out' || 
+            issbAppearance === 'twice_appeared_&_2_times_red_card') {
+            isEligible = false;
+            reasons.push("ISSB appearance limit exceeded");
+        }
+
+        // Display result
+        const resultDiv = document.getElementById('result');
+        resultDiv.style.display = 'block';
+        
+        if (isEligible) {
+            resultDiv.className = 'result success';
+            resultDiv.innerHTML = '<h2>Congratulations! You are eligible to apply.</h2>';
+        } else {
+            resultDiv.className = 'result error';
+            let html = '<h2>Unfortunately, you aren\'t eligible to apply.</h2>';
+            html += '<div class="reasons"><h3>Reasons:</h3><ul>';
+            reasons.forEach(reason => {
+                html += `<li>${reason}</li>`;
+            });
+            html += '</ul></div>';
+            resultDiv.innerHTML = html;
+        }
+
+        resultDiv.innerHTML += '<div class="warning">WARNING: This result is fully based on your provided information. We can\'t guarantee you that this result is 100% accurate.</div>';
+    });
 </script>
 
 <!-- JS here -->
